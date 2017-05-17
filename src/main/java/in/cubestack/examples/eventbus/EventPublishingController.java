@@ -19,6 +19,7 @@ public class EventPublishingController {
     public String publish() {
         eventManager.post(new OrderEvent("ORDER", "One Plus 3T"));
         eventManager.post(new WishListEvent("WISHLIST", "LG 43' LED Full Screen TV"));
+        eventManager.post(new NotHandledEvent("NOT_HANDLED", "No handler is there for me. Sad :("));
         return "PUBLISHED ALL EVENTS";
     }
 }
